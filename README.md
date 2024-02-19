@@ -1,4 +1,4 @@
-![React App - Brave 2_19_2024 3_14_18 PM](https://github.com/MohitDev0/Portfolio/assets/145754136/c5fca835-b650-4bde-b5f6-b8182539ea9b)Link : https://portfolio-pdyouz2gg-mohits-projects-d0571468.vercel.app/
+Link : https://portfolio-pdyouz2gg-mohits-projects-d0571468.vercel.app/
 
 # Technologies Used
     javascript
