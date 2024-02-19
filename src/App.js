@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "./App.css";
+import SocialIcon from "./components/SocialIcon";
+import HeaderMenu from "./components/HeaderMenu";
+import { Profile } from './components/Profile';
+import About from './components/About';
+import Experience from './components/Experience';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+
+  var lastposition = 0;
+  window.addEventListener('scroll', () => {
+    var currentPosition = window.pageYOffset;
+    if (currentPosition === 0) {
+      document.body.classList.remove("header-show");
+      document.body.classList.remove("header-hide");
+    } else {
+      if (currentPosition > 70) {
+        document.body.classList.add("header-hide");
+      }
+      if (currentPosition > lastposition) {
+        document.body.classList.remove("header-show");
+      } else {
+        document.body.classList.remove("header-hide");
+        document.body.classList.add("header-show");
+      }
+    }
+    lastposition = currentPosition;
+  });
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SocialIcon  />
+      <HeaderMenu />
+      <Profile />
+      <About />
+      <Experience />
+      <Footer/>
+    </>
   );
 }
 
 export default App;
+

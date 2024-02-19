@@ -1,0 +1,107 @@
+.Yellow_dot {
+
+    position: absolute;
+    top: 47%;
+    left: -19%;
+    color: yellow;
+    animation: spin 30s infinite linear;
+    width: 13rem;
+    z-index: -1;
+
+}
+
+.Yellow_dot:before,
+.green_dot:before,
+.light_green_dot:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 100%;
+    background: rgb(134, 255, 0);
+    box-shadow: 0 0 2rem rgb(134, 255, 0), 0 0 4rem rgb(134, 255, 0), 0 0 6rem rgb(134, 255, 0), 0 0 8rem rgb(134, 255, 0), 0 0 0 0.8rem rgba(134, 255, 0, 0.1);
+}
+
+@keyframes spin {
+
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+
+.green_dot {
+    position: absolute;
+    top: 34%;
+    left: 37%;
+    animation: animate-reverse 25s infinite linear;
+    width: 10rem;
+}
+
+.green_dot:before {
+    background: rgb(255, 255, 0);
+    box-shadow: 0 0 2rem rgb(255, 255, 0), 0 0 4rem rgb(255, 255, 0), 0 0 6rem rgb(255, 255, 0), 0 0 8rem rgb(255, 255, 0), 0 0 0 0.8rem rgba(255, 255, 0, 0.1);
+}
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.light_green_dot {
+    position: absolute;
+    right: 50%;
+    bottom: 39%;
+    animation: animate 15s infinite linear;
+    width: 4rem;
+}
+
+.light_green_dot:before {
+    background: rgb(38, 87, 54);
+    box-shadow: 0 0 2rem rgb(38, 87, 54), 0 0 4rem rgb(38, 87, 54), 0 0 6rem rgb(38, 87, 54), 0 0 8rem rgb(38, 87, 54), 0 0 0 0.8rem rgba(38, 87, 54, 0.1);
+
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.animate {
+    position: relative;
+    min-width: 25rem;
+    height: 30rem;
+}
+
+.animation_wrapper {
+    position: absolute;
+    z-index: -9999;
+}
+
+@media screen and (max-width:541px) {
+    .animate {
+        position: relative;
+        min-width: 20rem;
+        height: 20rem;
+    }
+}
